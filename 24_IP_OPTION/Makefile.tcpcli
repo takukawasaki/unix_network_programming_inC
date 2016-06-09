@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpcli
+OBJS = tcpcli.o sourceroute.o
+PROGS = tcpcli
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

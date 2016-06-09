@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpserver_select
+OBJS = tcpserver_select.o
+PROGS = tcpserver_select
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

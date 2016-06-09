@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = prefork_server04
+OBJS = prefork_server04.o child04.o web_child.o pr_cpu_time.o
+PROGS = prefork_server04
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

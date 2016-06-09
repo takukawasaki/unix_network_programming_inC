@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = unixstrcli01
+OBJS = unixstrcli01.o
+PROGS = unixstrcli01
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

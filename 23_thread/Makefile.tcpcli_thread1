@@ -1,0 +1,15 @@
+include ../Make.defines
+PROGRAM = tcpcli_thread1
+OBJS = tcpcli_thread1.o
+PROGS = tcpcli_thread1
+
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

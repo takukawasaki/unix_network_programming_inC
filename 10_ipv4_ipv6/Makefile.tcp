@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpserver_testipv4_6
+OBJS = tcpserver_testipv4_6.c
+PROGS = tcpserver_testipv4_6
+
+     
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

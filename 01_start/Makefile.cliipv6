@@ -1,0 +1,13 @@
+include ../Make.defines
+PROGRAM = timecliipv6
+OBJS = daytimecliipv6.o
+PROGS = timecliipv6
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

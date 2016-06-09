@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = pre_thread_server02
+OBJS = pre_thread_server02.o  pr_cpu_time.o web_child.o pre_pthread02.o
+PROGS = pre_thread_server02
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

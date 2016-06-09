@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = byteorder
+OBJS = byteorder.o
+PROGS = byteorder
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

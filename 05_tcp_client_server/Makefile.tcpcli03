@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpcli03
+OBJS = tcpcli03.o
+PROGS = tcpcli03
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

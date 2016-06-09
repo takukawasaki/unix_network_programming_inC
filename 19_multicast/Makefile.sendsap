@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = sendsap
+OBJS = sendsap.o
+PROGS = sendsap
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

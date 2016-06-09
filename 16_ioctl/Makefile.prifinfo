@@ -1,0 +1,15 @@
+include ../Make.defines
+PROGRAM = prifinfo
+OBJS = prifinfo.o get_ifi_info.o
+PROGS = prifinfo
+
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

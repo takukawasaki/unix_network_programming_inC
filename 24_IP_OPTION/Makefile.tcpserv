@@ -1,0 +1,15 @@
+include ../Make.defines
+PROGRAM = tcpserv
+OBJS = tcpserv.o sourceroute.o
+PROGS = tcpserv
+
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

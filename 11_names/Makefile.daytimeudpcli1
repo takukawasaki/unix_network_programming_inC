@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = daytimeudpcli1
+OBJS = daytimeudpcli.o
+PROGS = daytimeudpcli1
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

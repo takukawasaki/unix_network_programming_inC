@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcprecv01
+OBJS = tcprecv.o
+PROGS = tcprecv01
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

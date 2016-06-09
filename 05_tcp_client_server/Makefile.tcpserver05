@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpserver05
+OBJS = tcpserver05.o sigchldwaitpid.o
+PROGS = tcpserver05
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

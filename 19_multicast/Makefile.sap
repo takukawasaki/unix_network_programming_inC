@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = sap
+OBJS = sap.o
+PROGS = sap
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

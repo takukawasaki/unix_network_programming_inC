@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = udpcli
+OBJS = udpcli.o
+PROGS = udpcli
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

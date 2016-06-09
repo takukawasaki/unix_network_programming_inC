@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpcli_heartbeat
+OBJS = heartbeatcli.o tcpcli_heartbeat.o
+PROGS  = tcpcli_heartbeat
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

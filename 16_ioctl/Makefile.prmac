@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = prmac
+OBJS = prmac.o
+PROGS = prmac
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

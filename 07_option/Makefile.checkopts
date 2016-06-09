@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = checkopts
+OBJS = checkopts.o
+PROGS = checkopts
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

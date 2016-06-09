@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = udpclibrdcst1
+OBJS = udpclibrdcst1.o
+PROGS = udpclibrdcst1
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

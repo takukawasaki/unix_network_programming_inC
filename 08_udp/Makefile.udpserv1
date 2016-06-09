@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = udpserv1
+OBJS = udpserv1.o
+PROGS = udpserv1
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = web
+OBJS = web.o home_page.o start_connect.o write_get_cmd.o
+PROGS = web
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

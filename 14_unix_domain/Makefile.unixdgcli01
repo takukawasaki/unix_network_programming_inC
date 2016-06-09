@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = unixdgcli01
+OBJS = unixdgcli01.o
+PROGS = unixdgcli01
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

@@ -1,0 +1,14 @@
+include ../Make.defines
+PROGRAM = tcpserv_heartbeat
+OBJS = heartbeatserv.o tcpserv_heartbeat.o
+PROGS = tcpserv_heartbeat
+
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}

@@ -1,0 +1,13 @@
+include ../Make.defines
+PROGRAM = tcpserver02
+OBJS = tcpserver02.o
+PROGS = tcpserver02
+
+all: ${PROGS} 
+
+$(PROGRAM):$(OBJS)
+	${CC} ${CFLAGS} -o $@ ${OBJS} ${LIBS}
+
+
+clean:
+	rm -f ${PROGS} ${CLEANFILES}
